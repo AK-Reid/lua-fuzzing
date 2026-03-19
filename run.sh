@@ -37,4 +37,6 @@ mkdir -p "$DEPLOY_DIR/crashes"
 "$DEPLOY_DIR/lua_b_str2int_fuzz" \
     -max_total_time=60 \
     -artifact_prefix="$DEPLOY_DIR/crashes/" \
-    -print_final_stats=1
+    -print_final_stats=1 \
+    -dict=lua-fuzzing/fuzz_lua_stringtonumber.dict
+    lua-fuzzing/seeds
