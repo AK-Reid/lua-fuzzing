@@ -8,11 +8,11 @@ sudo apt install -y clang gcc make
 MacOS
 ```
 brew install llvm gcc make
-export PATH="$(brew --prefix llvm)/bin:$PATH
+export PATH="$(brew --prefix llvm)/bin:$PATH"
 export LDFLAGS="-L$(brew --prefix llvm)/lib"
 export CPPFLAGS="-I$(brew --prefix llvm)/include"
 ```
-Verifier clang is at least version 14
+Verify clang is at least version 14
 ```
 clang --version
 ```
@@ -26,13 +26,13 @@ cd lua-5.5.0/src
 make clean
 make -j$(nproc) lua CC=gcc MYCFLAGS="-g -O1"
 cd ../..
-/lua-fuzzing/bug_repro.lu
+lua lua-fuzzing/bug_repro.lua
 ```
 
 ### Fuzzer Setup
 Run the provided script,
 ```
-chmod +x deploy/run.sh
+chmod +x run.sh
 ./run.sh
 ```
 
